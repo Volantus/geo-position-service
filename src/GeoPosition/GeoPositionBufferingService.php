@@ -3,7 +3,6 @@ namespace Volante\SkyBukkit\GeoPositionService\Src\GeoPosition;
 
 use React\EventLoop\LoopInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Volante\SkyBukkit\Common\Src\Server\Messaging\Message;
 use Volante\SkyBukkit\Common\Src\Server\Messaging\MessageServerService;
 use Volante\SkyBukkit\Common\Src\Server\Messaging\MessageService;
 use Volante\SkyBukkit\Common\Src\Server\Network\ClientFactory;
@@ -32,19 +31,18 @@ class GeoPositionBufferingService extends MessageServerService
     {
         parent::__construct($output, $messageService, $clientFactory);
 
-        $this->geoPositionRepository = $geoPositionRepository ?: new GeoPositionRepository(
-        );
+        $this->geoPositionRepository = $geoPositionRepository ?: new GeoPositionRepository();
         $loop->addPeriodicTimer(1.1, function () {
-            $this->geoPositionRepository->refresh();
+            $this->sendPosition();
         });
     }
 
-    /**
-     * @param Message $message
-     */
-    protected function handleMessage(Message $message)
+    public function sendPosition()
     {
-        parent::handleMessage($message);
+        $this->geoPositionRepository->refresh();
 
+        $geoPosition = $this->geoPositionRepository->getCurrentPosition();
+        $geoPosition = $geoPosition->toRawMessage();
+        $this->broadcastMessage($geoPosition);
     }
 }
