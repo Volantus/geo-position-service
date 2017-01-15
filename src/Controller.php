@@ -17,6 +17,6 @@ class Controller extends \Volante\SkyBukkit\Common\Src\Server\Controller
      */
     public function __construct(OutputInterface $output, GeoPositionBufferingService $geoPositionBufferingService)
     {
-        parent::__construct($output, $geoPositionBufferingService ?: new GeoPositionBufferingService($output));
+        parent::__construct($output, $geoPositionBufferingService);
     }
 }
