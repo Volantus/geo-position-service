@@ -1,15 +1,15 @@
 <?php
 namespace Volante\SkyBukkit\GeoPositionService\Src\Commands;
 
-use Ratchet\Http\HttpServer;
 use Ratchet\Server\IoServer;
-use Ratchet\WebSocket\WsServer;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Volante\SkyBukkit\GeoPositionService\Src\Controller;
 use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionBufferingService;
+use React\EventLoop\Factory as LoopFactory;
+use React\Socket\Server as Reactor;
 
 /**
  * Class ServerCommand
@@ -32,10 +32,14 @@ class ServerCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $service = new GeoPositionBufferingService($output);
+        $loop   = LoopFactory::create();
+        $socket = new Reactor($loop);
+        $socket->listen($input->getOption('port'), '127.0.0.1');
+
+        $service = new GeoPositionBufferingService($output, $loop);
         $controller = new Controller($output, $service);
 
-        $server = IoServer::factory(new HttpServer(new WsServer($controller)), $input->getOption('port'));
+        $server = new IoServer($controller, $socket, $loop);
         $server->run();
     }
 }
