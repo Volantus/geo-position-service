@@ -4,12 +4,12 @@ namespace Volante\SkyBukkit\GeoPositionService\Tests\GeoPosition;
 use Ratchet\ConnectionInterface;
 use React\EventLoop\LoopInterface;
 use Symfony\Component\Console\Tests\Fixtures\DummyOutput;
+use Volante\SkyBukkit\Common\Src\General\GeoPosition\GeoPosition;
 use Volante\SkyBukkit\Common\Src\General\Role\ClientRole;
 use Volante\SkyBukkit\Common\Src\Server\Messaging\MessageService;
 use Volante\SkyBukkit\Common\Src\Server\Network\Client;
 use Volante\SkyBukkit\Common\Src\Server\Network\ClientFactory;
 use Volante\SkyBukkit\Common\Tests\Server\General\DummyConnection;
-use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPosition;
 use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionBufferingService;
 use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionRepository;
 
