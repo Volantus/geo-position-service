@@ -32,7 +32,7 @@ class GeoPositionBufferingService extends MessageServerService
         parent::__construct($output, $messageService, $clientFactory);
 
         $this->geoPositionRepository = $geoPositionRepository ?: new GeoPositionRepository();
-        $loop->addPeriodicTimer(1.1, function () {
+        $loop->addPeriodicTimer(0.5, function () {
             $this->sendPosition();
         });
     }
