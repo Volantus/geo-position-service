@@ -39,13 +39,15 @@ class GeoPositionBufferingService extends MessageServerService
 
     public function sendPosition()
     {
-        $this->writeInfoLine('GeoPositionBufferingService', 'Refreshing current position...');
-        $this->geoPositionRepository->refresh();
+        $this->sandbox(function () {
+            $this->writeInfoLine('GeoPositionBufferingService', 'Refreshing current position...');
+            $this->geoPositionRepository->refresh();
 
-        $this->writeInfoLine('GeoPositionBufferingService', 'Broadcasting new position...');
-        $geoPosition = $this->geoPositionRepository->getCurrentPosition();
-        $geoPosition = $geoPosition->toRawMessage();
-        $this->broadcastMessage($geoPosition);
-        $this->writeInfoLine('GeoPositionBufferingService', 'Broadcasting finished!');
+            $this->writeInfoLine('GeoPositionBufferingService', 'Broadcasting new position...');
+            $geoPosition = $this->geoPositionRepository->getCurrentPosition();
+            $geoPosition = $geoPosition->toRawMessage();
+            $this->broadcastMessage($geoPosition);
+            $this->writeInfoLine('GeoPositionBufferingService', 'Broadcasting finished!');
+        });
     }
 }
