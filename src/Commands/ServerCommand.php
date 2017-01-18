@@ -1,7 +1,9 @@
 <?php
 namespace Volante\SkyBukkit\GeoPositionService\Src\Commands;
 
+use Ratchet\Http\HttpServer;
 use Ratchet\Server\IoServer;
+use Ratchet\WebSocket\WsServer;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -39,7 +41,7 @@ class ServerCommand extends Command
         $service = new GeoPositionBufferingService($output, $loop);
         $controller = new Controller($output, $service);
 
-        $server = new IoServer($controller, $socket, $loop);
+        $server = new IoServer(new HttpServer(new WsServer($controller)), $socket, $loop);
         $server->run();
     }
 }
