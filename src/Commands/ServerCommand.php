@@ -1,5 +1,5 @@
 <?php
-namespace Volante\SkyBukkit\GeoPositionService\Src\Commands;
+namespace Volantus\GeoPositionService\Src\Commands;
 
 use Ratchet\Http\HttpServer;
 use Ratchet\Server\IoServer;
@@ -8,14 +8,14 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Volante\SkyBukkit\GeoPositionService\Src\Controller;
-use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionBufferingService;
+use Volantus\GeoPositionService\Src\Controller;
+use Volantus\GeoPositionService\Src\GeoPosition\GeoPositionBufferingService;
 use React\EventLoop\Factory as LoopFactory;
 use React\Socket\Server as Reactor;
 
 /**
  * Class ServerCommand
- * @package Volante\SkyBukkit\GeoPositionService\Src\Commands
+ * @package Volantus\GeoPositionService\Src\Commands
  */
 class ServerCommand extends Command
 {

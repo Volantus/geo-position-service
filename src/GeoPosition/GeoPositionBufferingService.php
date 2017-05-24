@@ -1,5 +1,5 @@
 <?php
-namespace Volante\SkyBukkit\GeoPositionService\Src\GeoPosition;
+namespace Volantus\GeoPositionService\Src\GeoPosition;
 
 use React\EventLoop\LoopInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -9,7 +9,7 @@ use Volantus\FlightBase\Src\Server\Network\ClientFactory;
 
 /**
  * Class GeoPositionBufferingService
- * @package Volante\SkyBukkit\GeoPositionService\Src\GeoPosition
+ * @package Volantus\GeoPositionService\Src\GeoPosition
  */
 class GeoPositionBufferingService extends MessageServerService
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Volante\SkyBukkit\GeoPositionService\Tests\GeoPosition;
+namespace Volantus\GeoPositionService\Tests\GeoPosition;
 
 use Ratchet\ConnectionInterface;
 use React\EventLoop\LoopInterface;
@@ -10,13 +10,13 @@ use Volantus\FlightBase\Src\Server\Messaging\MessageService;
 use Volantus\FlightBase\Src\Server\Network\Client;
 use Volantus\FlightBase\Src\Server\Network\ClientFactory;
 use Volantus\FlightBase\Tests\Server\General\DummyConnection;
-use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionBufferingService;
-use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionRepository;
+use Volantus\GeoPositionService\Src\GeoPosition\GeoPositionBufferingService;
+use Volantus\GeoPositionService\Src\GeoPosition\GeoPositionRepository;
 
 /**
  * Class GeoPositionBufferingServiceTest
  *
- * @package Volante\SkyBukkit\GeoPositionService\Tests\GeoPosition
+ * @package Volantus\GeoPositionService\Tests\GeoPosition
  */
 class GeoPositionBufferingServiceTest extends \PHPUnit_Framework_TestCase
 {

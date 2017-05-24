@@ -1,7 +1,8 @@
 <?php
+
 use Dotenv\Dotenv;
 use Symfony\Component\Console\Application;
-use Volante\SkyBukkit\GeoPositionService\Src\Commands\ServerCommand;
+use Volantus\GeoPositionService\Src\Commands\ServerCommand;
 
 require __DIR__.'/vendor/autoload.php';
 

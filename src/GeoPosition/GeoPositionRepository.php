@@ -1,5 +1,5 @@
 <?php
-namespace Volante\SkyBukkit\GeoPositionService\Src\GeoPosition;
+namespace Volantus\GeoPositionService\Src\GeoPosition;
 
 use Nykopol\GpsdClient\Client;
 use Volantus\FlightBase\Src\General\GeoPosition\GeoPosition;
@@ -7,7 +7,7 @@ use Volantus\FlightBase\Src\General\GeoPosition\GeoPosition;
 /**
  * Class GeoPositionRepository
  *
- * @package Volante\SkyBukkit\GeoPositionService\Src\GeoPosition
+ * @package Volantus\GeoPositionService\Src\GeoPosition
  */
 class GeoPositionRepository
 {

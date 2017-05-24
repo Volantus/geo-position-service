@@ -1,12 +1,12 @@
 <?php
-namespace Volante\SkyBukkit\GeoPositionService\Src;
+namespace Volantus\GeoPositionService\Src;
 
 use Symfony\Component\Console\Output\OutputInterface;
-use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionBufferingService;
+use Volantus\GeoPositionService\Src\GeoPosition\GeoPositionBufferingService;
 
 /**
  * Class Controller
- * @package Volante\SkyBukkit\GeoPositionService\Src
+ * @package Volantus\GeoPositionService\Src
  */
 class Controller extends \Volantus\FlightBase\Src\Server\Controller
 {

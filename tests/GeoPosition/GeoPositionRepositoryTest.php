@@ -1,14 +1,14 @@
 <?php
-namespace Volante\SkyBukkit\GeoPositionService\Tests\GeoPosition;
+namespace Volantus\GeoPositionService\Tests\GeoPosition;
 
 use Nykopol\GpsdClient\Client;
 use Volantus\FlightBase\Src\General\GeoPosition\GeoPosition;
-use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionRepository;
+use Volantus\GeoPositionService\Src\GeoPosition\GeoPositionRepository;
 
 /**
  * Class GeoPositionRepositoryTest
  *
- * @package Volante\SkyBukkit\GeoPositionService\Tests\GeoPosition
+ * @package Volantus\GeoPositionService\Tests\GeoPosition
  */
 class GeoPositionRepositoryTest extends \PHPUnit_Framework_TestCase
 {
