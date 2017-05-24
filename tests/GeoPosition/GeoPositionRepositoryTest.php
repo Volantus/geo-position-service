@@ -2,7 +2,7 @@
 namespace Volante\SkyBukkit\GeoPositionService\Tests\GeoPosition;
 
 use Nykopol\GpsdClient\Client;
-use Volante\SkyBukkit\Common\Src\General\GeoPosition\GeoPosition;
+use Volantus\FlightBase\Src\General\GeoPosition\GeoPosition;
 use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionRepository;
 
 /**

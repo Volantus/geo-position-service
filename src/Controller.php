@@ -8,7 +8,7 @@ use Volante\SkyBukkit\GeoPositionService\Src\GeoPosition\GeoPositionBufferingSer
  * Class Controller
  * @package Volante\SkyBukkit\GeoPositionService\Src
  */
-class Controller extends \Volante\SkyBukkit\Common\Src\Server\Controller
+class Controller extends \Volantus\FlightBase\Src\Server\Controller
 {
     /**
      * Controller constructor.

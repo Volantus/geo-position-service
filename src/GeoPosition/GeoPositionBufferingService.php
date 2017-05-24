@@ -3,9 +3,9 @@ namespace Volante\SkyBukkit\GeoPositionService\Src\GeoPosition;
 
 use React\EventLoop\LoopInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use Volante\SkyBukkit\Common\Src\Server\Messaging\MessageServerService;
-use Volante\SkyBukkit\Common\Src\Server\Messaging\MessageService;
-use Volante\SkyBukkit\Common\Src\Server\Network\ClientFactory;
+use Volantus\FlightBase\Src\Server\Messaging\MessageServerService;
+use Volantus\FlightBase\Src\Server\Messaging\MessageService;
+use Volantus\FlightBase\Src\Server\Network\ClientFactory;
 
 /**
  * Class GeoPositionBufferingService
