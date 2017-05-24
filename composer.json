@@ -1,6 +1,6 @@
 {
   "name": "volantus/geo-position-service",
-  "description": "Buffers geo position data for low latency access",
+  "description": "Determines and buffers GPS geo position data for low latency access",
   "type": "project",
   "license": "proprietary",
   "authors": [
