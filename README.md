@@ -1,2 +1,2 @@
-# flight-base
-Base library for all Volantus flight stack modules
+# geo-position-service
+Determines and buffers GPS geo position data for low latency access
